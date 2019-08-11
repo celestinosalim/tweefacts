@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/celestinosalim/tweefacts#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "twit": "^2.2.11"
   }
 }
