@@ -1,0 +1,23 @@
+{
+  "name": "tweefacts",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/celestinosalim/tweefacts.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/celestinosalim/tweefacts/issues"
+  },
+  "homepage": "https://github.com/celestinosalim/tweefacts#readme",
+  "dependencies": {
+    "twit": "^2.2.11"
+  }
+}
