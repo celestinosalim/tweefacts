@@ -60,8 +60,8 @@ userActivityWebhook.on("event", (event, userId, data) =>
 //listen to unknown payload (in case of api new features)
 userActivityWebhook.on("unknown-event", rawData => console.log(rawData));
 
-const server = https.createServer({
-  ...yourHttpsConfig
-});
+// const server = https.createServer({
+//   ...yourHttpsConfig
+// });
 
-server.listen(443);
+app.listen(443);
