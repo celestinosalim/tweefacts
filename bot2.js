@@ -13,16 +13,16 @@ const T = new Twit({
   strictSSL: true // optional - requires SSL certificates to be valid.
 });
 
-let params = {
-  q: "facts",
-  count: 10
+let tweet = {
+  status: "My First Tweet from Node JS"
 };
 
-const gotData = (err, data, response) => {
-  let tweets = data.statuses;
-  for (let i = 0; i < tweets.length; i++) {
-    console.log(tweets[i].text);
+T.post("statuses/update", tweet, tweeted);
+
+function tweeted(err, data, response) {
+  if (err) {
+    console.log("something is wrong");
+  } else {
+    console.log("It Worked!");
   }
-};
-
-T.get("search/tweets", params, gotData);
+}
