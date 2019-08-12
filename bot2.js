@@ -13,16 +13,22 @@ const T = new Twit({
   strictSSL: true // optional - requires SSL certificates to be valid.
 });
 
-let tweet = {
-  status: "My First Tweet from Node JS"
+const postTweet = () => {
+  let r = Math.floor(Math.random() * 100);
+
+  let tweet = {
+    status: `${r} random Tweet from Node JS`
+  };
+
+  const tweeted = (err, data, response) => {
+    if (err) {
+      console.log("something is wrong", err);
+    } else {
+      console.log("It Worked!");
+    }
+  };
+
+  T.post("statuses/update", tweet, tweeted);
 };
 
-T.post("statuses/update", tweet, tweeted);
-
-function tweeted(err, data, response) {
-  if (err) {
-    console.log("something is wrong");
-  } else {
-    console.log("It Worked!");
-  }
-}
+setInterval(postTweet, 1000 * 20);
